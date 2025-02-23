@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import '../widget/category_task.dart';
 import '../widget/icon_widget.dart';
 import '../widget/task_bar.dart';
@@ -12,10 +11,9 @@ class Home3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF3F5F4),
+      // backgroundColor: Color(0xffF3F5F4),
       appBar: AppBar(
-        backgroundColor: Color(0xffF3F5F4),
-        leading: IconWidget(icon: Icons.arrow_back_ios_sharp),
+        leading: IconWidget(icon: Icon(Icons.arrow_back_ios_sharp)),
         title: TextWidget(
           text: "Today Tasks",
           fontSize: 25,
@@ -37,7 +35,7 @@ class Home3 extends StatelessWidget {
                 spacing: 1,
                 children: [
                   IconWidget(
-                    icon: Icons.add,
+                    icon: Icon(Icons.add),
                     size: 26,
                   ),
                   TextWidget(
@@ -115,17 +113,17 @@ class Home3 extends StatelessWidget {
                     icon: Icons.work_outline_sharp,
                     textDo: "Work Task",
                     statuesText: "Future",
-                    backgroundcolorStatuesText: Color(0xffF3F5F4),
+                    backgroundColorStatuesText: Color(0xffF3F5F4),
                     detailsTextDo:
                         "Go to SuperMarket to buy some milk &\n eggs",
                     backgroundColorIcon: Colors.black,
-                    colorstatuesText: Colors.black,
+                    colorStatuesText: Colors.black,
                   ),
                   CategoryTask(
                     icon: Icons.work_outline_sharp,
                     textDo: "Work Task",
                     statuesText: "Done",
-                    backgroundcolorStatuesText: Colors.green,
+                    backgroundColorStatuesText: Colors.green,
                     detailsTextDo:
                         "Go to SuperMarket to buy some milk &\n eggs",
                     backgroundColorIcon: Colors.black,
@@ -134,9 +132,9 @@ class Home3 extends StatelessWidget {
                     icon: Icons.home_outlined,
                     textDo: "Home Task",
                     statuesText: "Future",
-                    backgroundcolorStatuesText: Color(0xffF3F5F4),
+                    backgroundColorStatuesText: Color(0xffF3F5F4),
                     backgroundColorIcon: Color(0xffFF0084),
-                    colorstatuesText: Colors.black,
+                    colorStatuesText: Colors.black,
                     detailsTextDo:
                         "Add new feature for Do It app and \n commit it",
                   ),
@@ -144,8 +142,8 @@ class Home3 extends StatelessWidget {
                     icon: Icons.person,
                     textDo: "Person Task",
                     statuesText: "In Progress \n ",
-                    backgroundcolorStatuesText: Color(0xffCEEBDC),
-                    colorstatuesText: Colors.black,
+                    backgroundColorStatuesText: Color(0xffCEEBDC),
+                    colorStatuesText: Colors.black,
                     detailsTextDo:
                         "Improve my English skills by trying to \n speak",
                     backgroundColorIcon: Colors.green,
@@ -154,7 +152,7 @@ class Home3 extends StatelessWidget {
                     icon: Icons.home_outlined,
                     textDo: "Home Task",
                     statuesText: "Done",
-                    backgroundcolorStatuesText: Colors.green,
+                    backgroundColorStatuesText: Colors.green,
                     detailsTextDo:
                         "Add new feature for Do It app and \n commit it",
                     backgroundColorIcon: Color(0xffFF0084),
