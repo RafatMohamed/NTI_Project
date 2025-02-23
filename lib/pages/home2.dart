@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../widget/icon_widget.dart';
 import '../widget/text_widget.dart';
 
-
 class Home2 extends StatelessWidget {
   const Home2({super.key});
 
@@ -12,7 +11,7 @@ class Home2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 200,
-        leading: IconWidget(icon: Icons.menu),
+        leading: IconWidget(icon: Icon(Icons.menu)),
         title: Text("Test"),
         centerTitle: true,
         actions: [
@@ -20,7 +19,7 @@ class Home2 extends StatelessWidget {
           SizedBox(
             width: 10,
           ),
-          IconWidget(icon: Icons.search),
+          IconWidget(icon: Icon(Icons.search)),
           SizedBox(
             width: 10,
           ),

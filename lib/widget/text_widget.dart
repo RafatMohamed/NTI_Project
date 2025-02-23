@@ -5,6 +5,8 @@ class TextWidget extends StatelessWidget {
   final FontWeight fontWeight;
   final double fontSize;
   final Color color;
+  final String? fontFamily;
+  final FontStyle? fontStyle;
 
   const TextWidget({
     super.key,
@@ -12,6 +14,8 @@ class TextWidget extends StatelessWidget {
     this.fontWeight = FontWeight.normal,
     this.fontSize = 18,
     this.color = Colors.black,
+    this.fontFamily,
+    this.fontStyle,
   });
 
   @override
@@ -21,7 +25,9 @@ class TextWidget extends StatelessWidget {
       style: TextStyle(
         color: color,
         fontSize: fontSize,
-        fontWeight: FontWeight.bold,
+        fontWeight: fontWeight,
+        fontFamily: fontFamily,
+        fontStyle: fontStyle,
       ),
     );
   }

@@ -2,25 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:nti_proj/widget/task_bar.dart';
 import 'package:nti_proj/widget/text_widget.dart';
 
-
 class CategoryTask extends StatelessWidget {
   const CategoryTask({
     super.key,
     this.backgroundColorIcon = Colors.black,
-    required this.icon,
+    this.icon,
     required this.textDo,
-    required this.statuesText,
-    this.backgroundcolorStatuesText = Colors.green,
+    this.statuesText,
+    this.backgroundColorStatuesText = Colors.green,
     required this.detailsTextDo,
-    this.colorstatuesText = Colors.white,
+    this.colorStatuesText = Colors.white,
   });
-  final Color backgroundColorIcon;
-  final IconData icon;
+  final Color? backgroundColorIcon;
+  final IconData? icon;
   final String textDo;
-  final String statuesText;
-  final Color colorstatuesText;
+  final String? statuesText;
+  final Color? colorStatuesText;
 
-  final Color backgroundcolorStatuesText;
+  final Color? backgroundColorStatuesText;
   final String detailsTextDo;
 
   @override
@@ -60,11 +59,11 @@ class CategoryTask extends StatelessWidget {
                 ),
                 TaskBar(
                   width: 90,
-                  text: statuesText,
-                  textColor: colorstatuesText,
-                  backgroundColor: backgroundcolorStatuesText,
+                  text: statuesText ?? "",
+                  textColor: colorStatuesText,
+                  backgroundColor: backgroundColorStatuesText,
                   height: 20,
-                  borderColor: backgroundcolorStatuesText.withOpacity(0.5),
+                  borderColor: backgroundColorStatuesText,
                 ),
               ],
             ),

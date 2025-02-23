@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../widget/icon_widget.dart';
 import '../widget/text_widget.dart';
 
@@ -9,7 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconWidget(icon: Icons.menu),
+        leading: IconWidget(icon: Icon(Icons.menu)),
         title: TextWidget(
           text: "Task 1",
           color: Colors.cyan,
@@ -18,13 +19,13 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         actions: [
           IconWidget(
-            icon: Icons.search,
+            icon: Icon(Icons.search),
           ),
           SizedBox(
             width: 10,
           ),
           IconWidget(
-            icon: Icons.settings,
+            icon: Icon(Icons.settings),
           ),
           SizedBox(
             width: 10,
@@ -45,7 +46,7 @@ class HomePage extends StatelessWidget {
               width: 10,
             ),
             IconWidget(
-              icon: Icons.celebration,
+              icon: Icon(Icons.celebration),
             ),
           ],
         ),
