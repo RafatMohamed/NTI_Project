@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nti_proj/pages/profile_page.dart';
 import 'package:nti_proj/pages/task_text_form_page.dart';
+import 'package:nti_proj/pages/test_page_nti.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
       //   ),
       //   fontFamily: 'Lexend_Deca/LexendDeca-Regular.ttf',
       // ),
-      home: TaskTextFormPage(),
+      home: ProfilePage(),
     );
   }
 }

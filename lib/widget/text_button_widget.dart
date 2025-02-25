@@ -25,6 +25,9 @@ class TextButtonWidget extends StatelessWidget {
               top: Radius.elliptical(50, 14),
               bottom: Radius.elliptical(50, 14))),
       child: TextButton(
+        style: TextButton.styleFrom(
+          overlayColor: Colors.cyan,
+        ),
         onPressed: () {},
         child: Text(
           text,
