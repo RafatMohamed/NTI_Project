@@ -17,13 +17,14 @@ class TaskTextFormPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: MyColors.backgroundScaffoldColor,
         leading: IConSvgWidget(
-          width: 24,
-          height: 24,
-          icon: SvgPicture.asset(
-            width: 10,
-            height: 5,
-            "assets/ICons/iconamoon_arrow-up-2-thin.svg",
-            fit: BoxFit.none,
+          // width: 24,
+          // height: 24,
+          icon: IconButton(
+            onPressed: (){},
+            icon: SvgPicture.asset(
+              "assets/ICons/iconamoon_arrow-up-2-thin.svg",
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         title: TextWidget(
@@ -106,11 +107,17 @@ class TaskTextFormPage extends StatelessWidget {
                     ],
                   ),
                   TaskTextForm(
+                    hintText: "Home",
                     iconSuffix: true,
                     labelText: "Task Group",
                   ),
-                  TaskTextForm(iconSuffix: false, labelText: "Task Name"),
                   TaskTextForm(
+                    hintText: "Grocery Shopping App",
+                      iconSuffix: false,
+                      labelText: "Task Name",
+                  ),
+                  TaskTextForm(
+                    hintText: "Go for grocery to buy some products. Go for grocery to buy some products. Go for grocery to buy some products. Go for grocery to buy some products.",
                     iconSuffix: false,
                     labelText: "Description",
                     maxLine: 5,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:nti_proj/models/Icons/my_icons.dart';
 import '../models/Colors/my_colors.dart';
 import 'icon_svg_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -11,26 +12,26 @@ class TaskTextForm extends StatelessWidget {
       this.iconSuffix = false,
       this.color = Colors.white,
       required this.labelText,
-      this.maxLine = 1});
-  final bool? iconSuffix;
+      this.maxLine = 1, required this.hintText});
+  final bool iconSuffix;
   final Color color;
   final String labelText;
+  final String hintText;
   final int maxLine;
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: color,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(15),
       ),
-      padding: EdgeInsetsDirectional.symmetric(horizontal: 10, vertical: 10),
+      padding: EdgeInsetsDirectional.symmetric(horizontal: 10, vertical: 20),
       margin: EdgeInsets.symmetric(horizontal: 4),
-      width: double.infinity,
       child: TextFormField(
         decoration: InputDecoration(
           border: InputBorder.none,
-          // contentPadding: EdgeInsetsDirectional.only(top: 10),
-          prefixIcon: iconSuffix!
+         contentPadding: EdgeInsetsDirectional.only(top: 10,bottom: 10),
+          icon: iconSuffix
               ? IConSvgWidget(
                   radius: 5,
                   width: 35,
@@ -39,7 +40,7 @@ class TaskTextForm extends StatelessWidget {
                   icon: SvgPicture.asset(
                     width: 19,
                     height: 19,
-                    "assets/ICons/iconHome.svg",
+                    MyIcons.iconHome,
                     fit: BoxFit.none,
                   ),
                 )
@@ -50,7 +51,7 @@ class TaskTextForm extends StatelessWidget {
             fontSize: 18,
             fontFamily: "LexendDeca",
           ),
-          hintText: "Home",
+          hintText: hintText,
           hintStyle: TextStyle(
             color: MyColors.textBlackColor,
             fontSize: 14,
@@ -60,7 +61,6 @@ class TaskTextForm extends StatelessWidget {
         ),
         keyboardType: TextInputType.multiline,
         maxLines: maxLine,
-        maxLength: 500,
         textInputAction: TextInputAction.newline,
         enableSuggestions: true,
         textAlign: TextAlign.start,
@@ -108,7 +108,7 @@ class TimeTextForm extends StatelessWidget {
                   icon: SvgPicture.asset(
                     width: 20,
                     height: 20,
-                    "assets/ICons/calendar.svg",
+                    MyIcons.iconCalendar,
                     // color: Color(0xff149954),
                     fit: BoxFit.none,
                   ),
@@ -192,7 +192,7 @@ class _TimeTextFormStState extends State<TimeTextFormSt> {
                   radius: 5,
                   colorContanier: Colors.transparent,
                   icon: SvgPicture.asset(
-                    "assets/ICons/calendar.svg",
+                    MyIcons.iconCalendar,
                     width: 20,
                     height: 20,
                     // color: const Color(0xff149954),
