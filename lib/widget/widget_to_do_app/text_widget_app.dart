@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-class TextWidget extends StatelessWidget {
+import '../../models/Colors/my_colors.dart';
+
+class TextWidgetApp extends StatelessWidget {
   final String text;
   final FontWeight fontWeight;
   final double fontSize;
@@ -9,14 +11,15 @@ class TextWidget extends StatelessWidget {
   final FontStyle? fontStyle;
   final TextAlign? textAlign;
 
-  const TextWidget({
+  const TextWidgetApp({
     super.key,
     required this.text,
     this.fontWeight = FontWeight.normal,
     this.fontSize = 18,
-    this.color = Colors.black,
+    this.color = MyColors.textBlackColor,
     this.fontFamily,
-    this.fontStyle, this.textAlign=TextAlign.start,
+    this.fontStyle,
+    this.textAlign = TextAlign.start,
   });
 
   @override
