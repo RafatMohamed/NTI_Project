@@ -16,6 +16,13 @@ class TextButtonWidget extends StatelessWidget {
       width: double.infinity,
       height: 50,
       decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.green,
+            blurRadius: 10,
+            offset: Offset(0, 5),
+          )
+        ],
           border: Border.all(
             color: fillColor,
             style: BorderStyle.solid,

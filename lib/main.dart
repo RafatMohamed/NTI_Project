@@ -1,30 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:nti_proj/pages/profile_page.dart';
-import 'package:nti_proj/pages/task_text_form_page.dart';
-import 'package:nti_proj/pages/test_page_nti.dart';
-
+import 'package:nti_proj/models/Colors/my_colors.dart';
+import 'package:nti_proj/pages/to_do_app/profile_page_app.dart';
+import 'package:nti_proj/pages/to_do_app/splach_page.dart';
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+  const MyApp({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Project Flutter",
+      initialRoute: 'lib/pages/to_do_app',
+      routes: {
+        '/profile_page_app.dart': (context) => ProfilePageApp(),
+      },
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: MyColors.backgroundScaffoldColor,
+          elevation: 0,
+        ),
+        scaffoldBackgroundColor: MyColors.backgroundScaffoldColor,
+      ),
+      title: "To Do",
       debugShowCheckedModeBanner: false,
-      // theme: ThemeData(
-      //   scaffoldBackgroundColor: Color(0xffF3F5F4),
-      //   appBarTheme: AppBarTheme(
-      //     backgroundColor: MyColors.backgroundColor,
-      //     centerTitle: true,
-      //   ),
-      //   fontFamily: 'Lexend_Deca/LexendDeca-Regular.ttf',
-      // ),
-      home: ProfilePage(),
+      home: LetsStart(),
     );
   }
 }

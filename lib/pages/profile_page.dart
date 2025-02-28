@@ -21,7 +21,7 @@ class ProfilePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
-              "${MyImages.imageFlagpalestine}",
+              MyImages.imageFlagpalestine,
               height: 277,
               width: double.infinity,
               fit: BoxFit.fill,

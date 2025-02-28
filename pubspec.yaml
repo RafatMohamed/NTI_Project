@@ -84,6 +84,14 @@ flutter:
           weight: 200
         - asset: assets/fonts/Lexend_Deca/static/LexendDeca-Light.ttf
           weight: 300
+        - asset: assets/fonts/Lexend_Deca/static/LexendDeca-Medium.ttf
+          weight: 400
+        - asset: assets/fonts/Lexend_Deca/static/LexendDeca-SemiBold.ttf
+          weight: 500
+        - asset: assets/fonts/Lexend_Deca/static/LexendDeca-Bold.ttf
+          weight: 600
+        - asset: assets/fonts/Lexend_Deca/static/LexendDeca-ExtraBold.ttf
+          weight: 700
 
 
 
